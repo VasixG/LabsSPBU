@@ -1,0 +1,88 @@
+# depslib dependency file v1.0
+1650023842 source:f:\лабы\matrix\main.c
+	<stdio.h>
+	<stdlib.h>
+	"matrix_init.h"
+	"matrix_operations.h"
+	"matrix_gauss.h"
+
+1650021034 f:\лабы\matrix\matrix_init.h
+
+1650021470 f:\лабы\matrix\matrix_operations.h
+
+1650021540 source:f:\лабы\matrix\matrix_operations.c
+	<stdio.h>
+	<stdlib.h>
+	"matrix_init.h"
+	"matrix_operations.h"
+
+1650022182 source:f:\лабы\matrix\matrix_init.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"matrix_init.h"
+
+1650042218 source:e:\лабы\matrix\matrix_init.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"matrix_init.h"
+
+1650035434 e:\лабы\matrix\matrix_init.h
+
+1650035940 source:e:\лабы\matrix\matrix_operations.c
+	<stdio.h>
+	<stdlib.h>
+	"matrix_init.h"
+	"matrix_operations.h"
+
+1650035870 e:\лабы\matrix\matrix_operations.h
+
+1650038254 source:e:\лабы\matrix\matrix_gauss.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"matrix_init.h"
+	"matrix_operations.h"
+	"matrix_gauss.h"
+
+1650037966 e:\лабы\matrix\matrix_gauss.h
+
+1650052864 source:e:\лабы\matrix\main.c
+	<stdio.h>
+	<stdlib.h>
+	"matrix_init.h"
+	"matrix_operations.h"
+	"matrix_gauss.h"
+	"matrix_exponent.h"
+
+1650023854 source:f:\лабы\matrix\matrix_gauss.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"matrix_init.h"
+	"matrix_operations.h"
+	"matrix_gauss.h"
+
+1650023566 f:\лабы\matrix\matrix_gauss.h
+
+1650025244 source:f:\лабы\matrix\matrix_exponent.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"matrix_init.h"
+	"matrix_operations.h"
+	"matrix_exponent.h"
+
+1650025166 f:\лабы\matrix\matrix_exponent.h
+
+1650053162 source:e:\лабы\matrix\matrix_exponent.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"matrix_init.h"
+	"matrix_operations.h"
+	"matrix_exponent.h"
+
+1650039566 e:\лабы\matrix\matrix_exponent.h
+
