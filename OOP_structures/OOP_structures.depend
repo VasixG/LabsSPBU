@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1666957061 source:c:\users\vasil\onedrive\Документы\codeblocks\oop_structures\main.cpp
+	<iostream>
+	"list.h"
+	"stack.h"
+
+1666958519 c:\users\vasil\onedrive\Документы\codeblocks\oop_structures\list.h
+
+1666960849 c:\users\vasil\onedrive\Документы\codeblocks\oop_structures\stack.h
+	"list.h"
+	<ostream>
+
