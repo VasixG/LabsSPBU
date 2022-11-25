@@ -2,7 +2,7 @@
 #define STACK_H_INCLUDED
 
 #include "list.h"
-#include <ostream>
+
 
 template <class T>
 class Stack:public List<T>{

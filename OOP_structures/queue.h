@@ -1,7 +1,6 @@
 #ifndef QUEUE_H_INCLUDED
 #define QUEUE_H_INCLUDED
 #include "list.h"
-#include <ostream>
 
 template <class T>
 class Queue: public List<T>{
@@ -21,7 +20,7 @@ public:
         }
     }
 
-    Queue<T>(Stack<T> &&q): head(q.head), tail(q.tail) {head = nullptr; tail = nullptr;}
+    Queue<T>(Queue<T> &&q): head(q.head), tail(q.tail) {head = nullptr; tail = nullptr;}
 
     virtual ~Queue(){
         while(head) pop();

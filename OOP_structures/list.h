@@ -1,6 +1,7 @@
 #ifndef LIST_H_INCLUDED
 #define LIST_H_INCLUDED
 
+#include <ostream>
 
 template <class T>
 class List{
