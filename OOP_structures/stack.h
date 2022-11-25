@@ -123,6 +123,10 @@ public:
         }
     }
 
+    virtual T get_front() const{
+        return head->value;
+    }
+
     bool is_empty() const{return !(head);}
 
 protected:

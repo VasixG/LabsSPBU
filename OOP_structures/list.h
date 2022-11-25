@@ -9,6 +9,7 @@ public:
     virtual List& push(const T value) = 0;
     virtual T pop() = 0;
     virtual bool is_empty() const = 0;
+    virtual T get_front() const = 0;
 
 protected:
     struct Node{

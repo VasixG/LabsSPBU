@@ -100,6 +100,10 @@ public:
         }
     }
 
+    virtual T get_front() const{
+        return head->value;
+    }
+
     virtual bool is_empty() const {return !(head);}
 
 protected:

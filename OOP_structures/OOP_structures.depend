@@ -10,3 +10,19 @@
 	"list.h"
 	<ostream>
 
+1669372835 source:c:\users\vasil\documents\codeblocks\labsspbu\oop_structures\main.cpp
+	<iostream>
+	"list.h"
+	"stack.h"
+	"queue.h"
+
+1669373029 c:\users\vasil\documents\codeblocks\labsspbu\oop_structures\list.h
+
+1669373092 c:\users\vasil\documents\codeblocks\labsspbu\oop_structures\stack.h
+	"list.h"
+	<ostream>
+
+1669373109 c:\users\vasil\documents\codeblocks\labsspbu\oop_structures\queue.h
+	"list.h"
+	<ostream>
+
