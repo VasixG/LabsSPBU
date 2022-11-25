@@ -129,6 +129,16 @@ public:
 
     bool is_empty() const{return !(head);}
 
+    virtual size_t size() const{
+
+        size_t size_s = 0;
+
+        Node *node = head;
+
+        while(node){++size_s;node=node->next;}
+        return size_s;
+    }
+
 protected:
     void print(std::ostream& stream) const{
         if(is_empty()){throw EMPTY;}

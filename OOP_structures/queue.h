@@ -103,6 +103,17 @@ public:
         return head->value;
     }
 
+    virtual size_t size() const{
+        size_t size_s = 0;
+
+        Node *node = head;
+
+        while(node){++size_s;node=node->next;}
+        return size_s;
+
+    }
+
+
     virtual bool is_empty() const {return !(head);}
 
 protected:

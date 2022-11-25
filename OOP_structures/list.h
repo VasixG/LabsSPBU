@@ -11,6 +11,7 @@ public:
     virtual T pop() = 0;
     virtual bool is_empty() const = 0;
     virtual T get_front() const = 0;
+    virtual size_t size() const = 0;
 
     friend std::ostream& operator << (std::ostream &stream, const List& lst){
 

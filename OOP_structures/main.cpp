@@ -15,7 +15,7 @@ int main()
     stck.push(a);
     stck.push(b);
     stck.push(c);
-
+    std::cout<<stck.size()<<"\n";
     stckk = stck;
 
     std::cout<<stckk;
@@ -39,6 +39,7 @@ int main()
     que.push(a);
     que.push(b);
     que.push(c);
+    std::cout<<stck.size()<<"\n";
 
     std::cout<<que<<'\n';
 
