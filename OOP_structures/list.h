@@ -12,6 +12,13 @@ public:
     virtual bool is_empty() const = 0;
     virtual T get_front() const = 0;
 
+    friend std::ostream& operator << (std::ostream &stream, const List& lst){
+
+        lst.print(stream);
+
+        return stream;
+    }
+
 protected:
     struct Node{
         T value;
@@ -20,12 +27,6 @@ protected:
         Node(const T _value = T(),struct Node* _next = nullptr): value{_value}, next{_next} {}
     };
 
-    friend std::ostream& operator << (std::ostream &stream, const List& lst){
-
-        lst.print(stream);
-
-        return stream;
-    }
     virtual void print (std::ostream& stream) const = 0;
 
 };
