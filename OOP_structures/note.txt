@@ -1,0 +1,10 @@
+* Используйте .gitignore, чтобы исключить bin/ obj/ .depend .layout (и др. генерируемые файлы, если будут)
+* friend operator << после private/protected - формально возможно, т.к. это не член класса и на него не влияет public/private, но может сбивать с толку
+* Похоже, что стек копируется не за один проход
+* Нет метода size() для определения размера
+* Ошибка компиляции для очереди:
+  queue.h:24:19: error: expected ‘)’ before ‘<’ token
+   24 |     Queue<T>(Stack<T> &&q): head(q.head), tail(q.tail) {head = nullptr; tail = nullptr;}
+      |             ~     ^
+      |                   )
+* Стек основные тесты пока проходит
