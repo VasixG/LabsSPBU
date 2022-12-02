@@ -1,5 +1,7 @@
 **/test_stack
 **/test_queue
+**/bin
+**/obj
 
 # Prerequisites
 *.d
