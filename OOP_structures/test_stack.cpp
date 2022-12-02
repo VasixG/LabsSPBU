@@ -12,7 +12,7 @@ int main()
     s1.push(3);
 
     cout << s1 << endl;         // 3->2->1
-//    cout << s1.size() << endl;
+    cout << s1.size() << endl;
     
     Stack<int> s2 (s1), s3;
 
@@ -24,10 +24,10 @@ int main()
     s2.push(6);
 
     cout << s1 << endl;         // 5->4->2->1
-//    cout << s1.size() << endl;  
+    cout << s1.size() << endl;  
     
     cout << s2 << endl;         // 6->2->1
-//    cout << s2.size() << endl;
+    cout << s2.size() << endl;
     
     s3 = s1;
     
@@ -39,12 +39,12 @@ int main()
     s3.push(9);
 
     cout << s1 << endl;         // 8->7->4->2->1
-//    cout << s1.size() << endl;
+    cout << s1.size() << endl;
     
     cout << s2 << endl;         // 6->2->1
-//    cout << s2.size() << endl;
+    cout << s2.size() << endl;
     
     cout << s3 << endl;         // 9->4->2->1
-//    cout << s3.size() << endl;
+    cout << s3.size() << endl;
 
 }
