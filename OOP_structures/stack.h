@@ -14,27 +14,36 @@ public:
     Stack(const Stack<T> &s) {
         head = nullptr;
 
-        Stack<T> *temp_st = new Stack<T>;
+        if(!s.is_empty()){
 
-        Node *temp = s.head;
+            if(s.size() != 1){
+                Node *curr_pos = s.head, *next_pos = s.head->next;
+                Node *curr_pos_new = new Node(curr_pos->value), *next_pos_new = new Node(next_pos->value);
+                curr_pos_new->next = next_pos_new;
 
+                curr_pos = next_pos;
+                next_pos = next_pos->next;
 
-        while(temp)
-        {
-            temp_st->push(temp->value);
-            temp = temp->next;
+                Node *head_temp = curr_pos_new;
+                head = curr_pos_new;
+                curr_pos_new = next_pos_new;
+
+                while(next_pos){
+                    next_pos_new = new Node(next_pos->value);
+                    curr_pos_new->next = next_pos_new;
+                    curr_pos_new = next_pos_new;
+                    curr_pos = next_pos;
+                    next_pos = next_pos->next;
+
+                }
+
+                head = head_temp;
+            }else{
+                push(s.head->value);
+            }
+
         }
 
-        Node *temp_2 = temp_st->head;
-
-        while(temp_2)
-        {
-            push(temp_2->value);
-            temp_2 = temp_2->next;
-        }
-
-        delete temp_st;
-        delete temp;
     }
 
     Stack<T>(Stack<T> &&s): head(s.head) {s.head = nullptr; }
@@ -50,28 +59,35 @@ public:
         if(&s == this) return *this;
         while(head) pop();
 
-        head = nullptr;
+        if(!s.is_empty()){
 
-        Stack<T> *temp_st = new Stack<T>;
+            if(s.size() != 1){
+                Node *curr_pos = s.head, *next_pos = s.head->next;
+                Node *curr_pos_new = new Node(curr_pos->value), *next_pos_new = new Node(next_pos->value);
+                curr_pos_new->next = next_pos_new;
 
-        Node *temp = s.head;
+                curr_pos = next_pos;
+                next_pos = next_pos->next;
 
-        while(temp)
-        {
-            temp_st->push(temp->value);
-            temp = temp->next;
+                Node *head_temp = curr_pos_new;
+                head = curr_pos_new;
+                curr_pos_new = next_pos_new;
+
+                while(next_pos){
+                    next_pos_new = new Node(next_pos->value);
+                    curr_pos_new->next = next_pos_new;
+                    curr_pos_new = next_pos_new;
+                    curr_pos = next_pos;
+                    next_pos = next_pos->next;
+
+                }
+
+                head = head_temp;
+            }else{
+                push(s.head->value);
+            }
+
         }
-
-        Node *temp_2 = temp_st->head;
-
-        while(temp_2)
-        {
-            push(temp_2->value);
-            temp_2 = temp_2->next;
-        }
-
-        delete temp_st;
-        delete temp;
 
         return *this;
     }
