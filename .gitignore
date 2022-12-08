@@ -1,5 +1,9 @@
 **/test_stack
 **/test_queue
+**/bin
+**/obj
+**/*.depend
+**/*.layout
 
 # Prerequisites
 *.d
