@@ -13,6 +13,7 @@ int main()
     std::cout<<stck.is_empty()<<'\n';
 
     stck.push(a);
+    stck.push(b);
 
     Stack<int> stcck(stck);
 

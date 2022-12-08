@@ -29,13 +29,6 @@ public:
 
     virtual size_t size() const = 0;
 
-    /*
-    virtual iterator begin() = 0;
-    virtual iterator end() = 0;
-
-    virtual const_iterator cbegin() const = 0;
-    virtual const_iterator cend() const = 0;*/
-
 
     friend std::ostream& operator << (std::ostream &stream, const List& lst){
 
