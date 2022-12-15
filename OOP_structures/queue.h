@@ -160,24 +160,39 @@ public:
         }
     };
 
+    friend operator == (const_iterator& cit, iterator &it){
+        return cit->current == it->current;
+    }
 
-        const_iterator begin() const
-        {
-            return const_iterator(head);
-        }
-        const_iterator end() const
-        {
-            return nullptr;
-        }
+    friend operator != (const_iterator& cit, iterator &it){
+        return cit->current != it->current;
+    }
 
-        const_iterator cbegin() const
-        {
-            return const_iterator(head);
-        }
-        const_iterator cend() const
-        {
-            return nullptr;
-        }
+    friend operator == (iterator& it, const_iterator &cit){
+        return cit->current == it->current;
+    }
+
+    friend operator != (iterator& it, const_iterator & cit){
+        return cit->current != it->current;
+    }
+
+    const_iterator begin() const
+    {
+        return const_iterator(head);
+    }
+    const_iterator end() const
+    {
+        return nullptr;
+    }
+
+    const_iterator cbegin() const
+    {
+        return const_iterator(head);
+    }
+    const_iterator cend() const
+    {
+        return nullptr;
+    }
 
 
     Queue<T> &operator = (Queue<T> &&q)
@@ -265,18 +280,8 @@ public:
 
     }
 
-
     virtual bool is_empty() const {return !(head);}
 
-protected:
-    virtual void print (std::ostream& stream) const{
-
-        stream<<"head->";
-        for(auto it = this->begin(); it != this->end(); ++it){
-            stream<<(*it)<<' ';
-        }
-        stream<<"<-tail";
-    }
 private:
     Node* head, *tail;
 

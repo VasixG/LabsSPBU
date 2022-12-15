@@ -186,23 +186,39 @@ public:
         }
     };
 
-        const_iterator begin() const
-        {
-            return const_iterator(head);
-        }
-        const_iterator end() const
-        {
-            return nullptr;
-        }
+    friend operator == (const_iterator& cit, iterator &it){
+        return cit->current == it->current;
+    }
 
-        const_iterator cbegin() const
-        {
-            return const_iterator(head);
-        }
-        const_iterator cend() const
-        {
-            return nullptr;
-        }
+    friend operator != (const_iterator& cit, iterator &it){
+        return cit->current != it->current;
+    }
+
+    friend operator == (iterator& it, const_iterator &cit){
+        return cit->current == it->current;
+    }
+
+    friend operator != (iterator& it, const_iterator & cit){
+        return cit->current != it->current;
+    }
+
+    const_iterator begin() const
+    {
+        return const_iterator(head);
+    }
+    const_iterator end() const
+    {
+        return nullptr;
+    }
+
+    const_iterator cbegin() const
+    {
+        return const_iterator(head);
+    }
+    const_iterator cend() const
+    {
+        return nullptr;
+    }
 
 
     Stack<T> &operator = (const Stack<T> &s)
@@ -304,15 +320,6 @@ public:
 
         while(node){++size_s;node=node->next;}
         return size_s;
-    }
-
-protected:
-    void print(std::ostream& stream) const{
-        if(is_empty()){throw EMPTY;}
-        stream<<"head->";
-        for(auto it = this->begin();it != this->end() ;++it){
-            stream<<(*it)<<' ';
-        }
     }
 
 private:

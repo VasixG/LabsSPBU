@@ -15,7 +15,7 @@ protected:
         Node(const T _value = T(),struct Node* _next = nullptr): value{_value}, next{_next} {}
     };
 
-    virtual void print (std::ostream& stream) const = 0;
+
 public:
     virtual ~List(){}
 
@@ -28,14 +28,6 @@ public:
     virtual T get_front() const = 0;
 
     virtual size_t size() const = 0;
-
-
-    friend std::ostream& operator << (std::ostream &stream, const List& lst){
-
-        lst.print(stream);
-
-        return stream;
-    }
 
 };
 

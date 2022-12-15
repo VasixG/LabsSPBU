@@ -16,11 +16,11 @@ int main()
     stck.push(b);
 
     Stack<int> stcck(stck);
-
+/*
     std::cout<<stck<<'\n';
     std::cout<<"--------\n";
     std::cout<<stcck<<'\n';
     std::cout<<"--------\n";
-
+*/
     return 0;
 }

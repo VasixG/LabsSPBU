@@ -10,19 +10,19 @@
 	"list.h"
 	<ostream>
 
-1670539204 source:c:\users\vasil\documents\codeblocks\labsspbu\oop_structures\main.cpp
+1671137505 source:c:\users\vasil\documents\codeblocks\labsspbu\oop_structures\main.cpp
 	<iostream>
 	"list.h"
 	"stack.h"
 	"queue.h"
 
-1669980541 c:\users\vasil\documents\codeblocks\labsspbu\oop_structures\list.h
+1671137855 c:\users\vasil\documents\codeblocks\labsspbu\oop_structures\list.h
 	<ostream>
 
-1670539602 c:\users\vasil\documents\codeblocks\labsspbu\oop_structures\stack.h
+1671137859 c:\users\vasil\documents\codeblocks\labsspbu\oop_structures\stack.h
 	"list.h"
 
-1670539774 c:\users\vasil\documents\codeblocks\labsspbu\oop_structures\queue.h
+1671137869 c:\users\vasil\documents\codeblocks\labsspbu\oop_structures\queue.h
 	"list.h"
 
 1669375263 source:c:\users\vasil\documents\codeblocks\labsspbu\oop_structures\stack.cpp
