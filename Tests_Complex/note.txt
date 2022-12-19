@@ -1,0 +1,159 @@
+* В целом по тестам все нормально, но у меня вот такие предупреждения компиляции - разберитесь
+
+In file included from complex_number.cpp:1:
+complex_number.h: В функции-члене «complex complex::operator/(complex&) const»:
+complex_number.h:112:45: предупреждение: ISO C++ говорит здесь о неоднозначности, хотя худшее преобразование для первого лучше, чем худшее преобразование для второго:
+  112 |         w = ((*this)*(c.inv()))/(c.sqr_abs());
+      |                                             ^
+complex_number.h:179:20: замечание: кандидат 1: «complex operator/(const complex&, double)»
+  179 |     friend complex operator / (const complex& c, double d){
+      |                    ^~~~~~~~
+complex_number.h:97:13: замечание: кандидат 2: «complex complex::operator/(double) const»
+   97 |     complex operator / (double d) const{
+      |             ^~~~~~~~
+complex_number.h: В функции-члене «complex& complex::operator/=(complex&)»:
+complex_number.h:134:49: предупреждение: ISO C++ говорит здесь о неоднозначности, хотя худшее преобразование для первого лучше, чем худшее преобразование для второго:
+  134 |         *this = ((*this)*(c.inv()))/(c.sqr_abs());
+      |                                                 ^
+complex_number.h:179:20: замечание: кандидат 1: «complex operator/(const complex&, double)»
+  179 |     friend complex operator / (const complex& c, double d){
+      |                    ^~~~~~~~
+complex_number.h:97:13: замечание: кандидат 2: «complex complex::operator/(double) const»
+   97 |     complex operator / (double d) const{
+      |             ^~~~~~~~
+In file included from complex_tests.h:8,
+                 from complex_tests.cpp:4:
+complex_number.h: В функции-члене «complex complex::operator/(complex&) const»:
+complex_number.h:112:45: предупреждение: ISO C++ говорит здесь о неоднозначности, хотя худшее преобразование для первого лучше, чем худшее преобразование для второго:
+  112 |         w = ((*this)*(c.inv()))/(c.sqr_abs());
+      |                                             ^
+complex_number.h:179:20: замечание: кандидат 1: «complex operator/(const complex&, double)»
+  179 |     friend complex operator / (const complex& c, double d){
+      |                    ^~~~~~~~
+complex_number.h:97:13: замечание: кандидат 2: «complex complex::operator/(double) const»
+   97 |     complex operator / (double d) const{
+      |             ^~~~~~~~
+complex_number.h: В функции-члене «complex& complex::operator/=(complex&)»:
+complex_number.h:134:49: предупреждение: ISO C++ говорит здесь о неоднозначности, хотя худшее преобразование для первого лучше, чем худшее преобразование для второго:
+  134 |         *this = ((*this)*(c.inv()))/(c.sqr_abs());
+      |                                                 ^
+complex_number.h:179:20: замечание: кандидат 1: «complex operator/(const complex&, double)»
+  179 |     friend complex operator / (const complex& c, double d){
+      |                    ^~~~~~~~
+complex_number.h:97:13: замечание: кандидат 2: «complex complex::operator/(double) const»
+   97 |     complex operator / (double d) const{
+      |             ^~~~~~~~
+complex_tests.cpp: В функции «void test_assign()»:
+complex_tests.h:29:42: предупреждение: ISO C++ говорит здесь о неоднозначности, хотя худшее преобразование для первого лучше, чем худшее преобразование для второго:
+   29 |      TEST(((x-y)/std::max(x.abs(),y.abs())).abs() < eps);
+      |                                          ^
+complex_tests.h:12:10: замечание: в определении макроса «TEST»
+   12 |    if (!(x)) std::cerr << "check "           \
+      |          ^
+complex_tests.cpp:26:5: замечание: в расширении макроса «EXCEPT_APPR»
+   26 |     EXCEPT_APPR(x_2, x, 0.001);
+      |     ^~~~~~~~~~~
+complex_number.h:179:20: замечание: кандидат 1: «complex operator/(const complex&, double)»
+  179 |     friend complex operator / (const complex& c, double d){
+      |                    ^~~~~~~~
+complex_number.h:97:13: замечание: кандидат 2: «complex complex::operator/(double) const»
+   97 |     complex operator / (double d) const{
+      |             ^~~~~~~~
+complex_tests.h:29:42: предупреждение: ISO C++ говорит здесь о неоднозначности, хотя худшее преобразование для первого лучше, чем худшее преобразование для второго:
+   29 |      TEST(((x-y)/std::max(x.abs(),y.abs())).abs() < eps);
+      |                                          ^
+complex_tests.h:12:10: замечание: в определении макроса «TEST»
+   12 |    if (!(x)) std::cerr << "check "           \
+      |          ^
+complex_tests.cpp:42:5: замечание: в расширении макроса «EXCEPT_APPR»
+   42 |     EXCEPT_APPR(x_3, x, 0.001);
+      |     ^~~~~~~~~~~
+complex_number.h:179:20: замечание: кандидат 1: «complex operator/(const complex&, double)»
+  179 |     friend complex operator / (const complex& c, double d){
+      |                    ^~~~~~~~
+complex_number.h:97:13: замечание: кандидат 2: «complex complex::operator/(double) const»
+   97 |     complex operator / (double d) const{
+      |             ^~~~~~~~
+complex_tests.cpp: В функции «void test_operators()»:
+complex_tests.cpp:71:22: предупреждение: ISO C++ говорит здесь о неоднозначности, хотя худшее преобразование для первого лучше, чем худшее преобразование для второго:
+   71 |     EXCEPT_EQ((y==(x-2.)),1);
+      |                      ^~
+complex_tests.h:12:10: замечание: в определении макроса «TEST»
+   12 |    if (!(x)) std::cerr << "check "           \
+      |          ^
+complex_tests.cpp:71:5: замечание: в расширении макроса «EXCEPT_EQ»
+   71 |     EXCEPT_EQ((y==(x-2.)),1);
+      |     ^~~~~~~~~
+complex_number.h:171:20: замечание: кандидат 1: «complex operator-(const complex&, double)»
+  171 |     friend complex operator - (const complex& c, double d){
+      |                    ^~~~~~~~
+complex_number.h:64:13: замечание: кандидат 2: «complex complex::operator-(double) const»
+   64 |     complex operator - (double d) const{
+      |             ^~~~~~~~
+complex_tests.cpp:74:17: предупреждение: ISO C++ говорит здесь о неоднозначности, хотя худшее преобразование для первого лучше, чем худшее преобразование для второго:
+   74 |     EXCEPT_EQ(x*a, complex(5,10));
+      |                 ^
+complex_tests.h:12:10: замечание: в определении макроса «TEST»
+   12 |    if (!(x)) std::cerr << "check "           \
+      |          ^
+complex_tests.cpp:74:5: замечание: в расширении макроса «EXCEPT_EQ»
+   74 |     EXCEPT_EQ(x*a, complex(5,10));
+      |     ^~~~~~~~~
+complex_number.h:175:20: замечание: кандидат 1: «complex operator*(const complex&, double)»
+  175 |     friend complex operator * (const complex& c, double d){
+      |                    ^~~~~~~~
+complex_number.h:85:13: замечание: кандидат 2: «complex complex::operator*(double) const»
+   85 |     complex operator * (double d) const{
+      |             ^~~~~~~~
+complex_tests.cpp:77:17: предупреждение: ISO C++ говорит здесь о неоднозначности, хотя худшее преобразование для первого лучше, чем худшее преобразование для второго:
+   77 |     EXCEPT_EQ(x+a, complex(6,2));
+      |                 ^
+complex_tests.h:12:10: замечание: в определении макроса «TEST»
+   12 |    if (!(x)) std::cerr << "check "           \
+      |          ^
+complex_tests.cpp:77:5: замечание: в расширении макроса «EXCEPT_EQ»
+   77 |     EXCEPT_EQ(x+a, complex(6,2));
+      |     ^~~~~~~~~
+complex_number.h:167:20: замечание: кандидат 1: «complex operator+(const complex&, double)»
+  167 |     friend complex operator + (const complex& c, double d){
+      |                    ^~~~~~~~
+complex_number.h:55:13: замечание: кандидат 2: «complex complex::operator+(double) const»
+   55 |     complex operator + (double d) const{
+      |             ^~~~~~~~
+complex_tests.cpp:80:17: предупреждение: ISO C++ говорит здесь о неоднозначности, хотя худшее преобразование для первого лучше, чем худшее преобразование для второго:
+   80 |     EXCEPT_EQ(x/a, complex(0.2,0.4));
+      |                 ^
+complex_tests.h:12:10: замечание: в определении макроса «TEST»
+   12 |    if (!(x)) std::cerr << "check "           \
+      |          ^
+complex_tests.cpp:80:5: замечание: в расширении макроса «EXCEPT_EQ»
+   80 |     EXCEPT_EQ(x/a, complex(0.2,0.4));
+      |     ^~~~~~~~~
+complex_number.h:179:20: замечание: кандидат 1: «complex operator/(const complex&, double)»
+  179 |     friend complex operator / (const complex& c, double d){
+      |                    ^~~~~~~~
+complex_number.h:97:13: замечание: кандидат 2: «complex complex::operator/(double) const»
+   97 |     complex operator / (double d) const{
+      |             ^~~~~~~~
+In file included from complex_tests.h:8,
+                 from main.cpp:3:
+complex_number.h: В функции-члене «complex complex::operator/(complex&) const»:
+complex_number.h:112:45: предупреждение: ISO C++ говорит здесь о неоднозначности, хотя худшее преобразование для первого лучше, чем худшее преобразование для второго:
+  112 |         w = ((*this)*(c.inv()))/(c.sqr_abs());
+      |                                             ^
+complex_number.h:179:20: замечание: кандидат 1: «complex operator/(const complex&, double)»
+  179 |     friend complex operator / (const complex& c, double d){
+      |                    ^~~~~~~~
+complex_number.h:97:13: замечание: кандидат 2: «complex complex::operator/(double) const»
+   97 |     complex operator / (double d) const{
+      |             ^~~~~~~~
+complex_number.h: В функции-члене «complex& complex::operator/=(complex&)»:
+complex_number.h:134:49: предупреждение: ISO C++ говорит здесь о неоднозначности, хотя худшее преобразование для первого лучше, чем худшее преобразование для второго:
+  134 |         *this = ((*this)*(c.inv()))/(c.sqr_abs());
+      |                                                 ^
+complex_number.h:179:20: замечание: кандидат 1: «complex operator/(const complex&, double)»
+  179 |     friend complex operator / (const complex& c, double d){
+      |                    ^~~~~~~~
+complex_number.h:97:13: замечание: кандидат 2: «complex complex::operator/(double) const»
+   97 |     complex operator / (double d) const{
+      |             ^~~~~~~~
