@@ -9,6 +9,9 @@ class Stack:public List<T>{
 
 public:
     typedef typename List<T>::Node Node;
+    typedef typename List<T>::iterator iterator;
+    typedef typename List<T>::const_iterator const_iterator;
+
     Stack(): head{nullptr} {}
 
     Stack(const Stack<T> &s) {
@@ -54,69 +57,6 @@ public:
 
     enum ERR_CODE {EMPTY, OUT_OF_RANGE};
 
-    class const_iterator;
-    class iterator
-    {
-    private:
-        typename List<T>::Node *current;
-    public:
-
-        iterator(typename List<T>::Node* current = nullptr)
-        {
-            this->current = current;
-        }
-        ~iterator() {};
-
-        T& operator  *() const
-        {
-            return current->value;
-        }
-        T* operator ->() const
-        {
-            return &current->value;
-        }
-
-        iterator& operator++()
-        {
-            this->current = this->current->next;
-            return *this;
-        }
-        iterator operator++(int)
-        {
-            iterator a = *this;
-            ++*this;
-            return a;
-        }
-
-        iterator operator +(unsigned n) const
-        {
-            if (n == 0)
-                return *this;
-            else if (n > 0)
-            {
-                iterator it2 = *this;
-                for(unsigned int i= 0; i < n; ++i, ++it2);
-                return it2;
-            }
-
-        }
-
-        iterator& operator += (unsigned n)
-        {
-            return *this + n;
-        }
-        bool operator == (const iterator& it) const
-        {
-            return this->current == it.current;
-        }
-        bool operator != (const iterator& it) const
-        {
-            return this->current != it.current;
-        }
-
-        friend const_iterator;
-    };
-
     iterator begin()
     {
         return iterator(head);
@@ -126,86 +66,11 @@ public:
         return nullptr;
     }
 
-    class const_iterator
-    {
-    private:
-        typename List<T>::Node *current;
-    public:
-
-        const_iterator(typename List<T>::Node* current = nullptr)
-        {
-            this->current = current;
-        }
-        ~const_iterator() {};
-
-        const T& operator  *() const
-        {
-            return current->value;
-        }
-        const T* operator ->() const
-        {
-            return &current->value;
-        }
-
-        const_iterator& operator++()
-        {
-            this->current = this->current->next;
-            return *this;
-        }
-        const_iterator operator++(int)
-        {
-            const_iterator a = *this;
-            ++*this;
-            return a;
-        }
-
-        const_iterator operator +(unsigned n) const
-        {
-            if (n == 0)
-                return *this;
-            else if (n > 0)
-            {
-                const_iterator it2 = *this;
-                for(unsigned int i= 0; i < n; ++i, ++it2);
-                return it2;
-            }
-
-        }
-
-        const_iterator& operator += (unsigned n)
-        {
-            return *this + n;
-        }
-        bool operator == (const const_iterator& it) const
-        {
-            return this->current == it.current;
-        }
-        bool operator != (const const_iterator& it) const
-        {
-            return this->current != it.current;
-        }
-    };
-
-    friend operator == (const_iterator& cit, iterator &it){
-        return cit->current == it->current;
-    }
-
-    friend operator != (const_iterator& cit, iterator &it){
-        return cit->current != it->current;
-    }
-
-    friend operator == (iterator& it, const_iterator &cit){
-        return cit->current == it->current;
-    }
-
-    friend operator != (iterator& it, const_iterator & cit){
-        return cit->current != it->current;
-    }
-
     const_iterator begin() const
     {
         return const_iterator(head);
     }
+
     const_iterator end() const
     {
         return nullptr;
@@ -215,6 +80,7 @@ public:
     {
         return const_iterator(head);
     }
+
     const_iterator cend() const
     {
         return nullptr;

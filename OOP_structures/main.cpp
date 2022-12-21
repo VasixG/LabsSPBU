@@ -12,8 +12,11 @@ int main()
 
     std::cout<<stck.is_empty()<<'\n';
 
-    stck.push(a);
-    stck.push(b);
+    que.push(a);
+    que.push(b);
+    que.push(c);
+
+    std::cout<<que;
 
     Stack<int> stcck(stck);
 /*
