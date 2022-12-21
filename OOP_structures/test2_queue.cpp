@@ -24,37 +24,37 @@ template <class T, class C> T sum (const C& c)
 
 int main()
 {
-    Queue s1, s2;
-    numerate f(100);
+    Queue<int> s1, s2;
+    numerate<int> f(100);
 
-    s1.Push(1);
-    s1.Push(2);
-    s1.Push(3);
+    s1.push(1);
+    s1.push(2);
+    s1.push(3);
     
-    s2.Push(5);
+    s2.push(5);
     s2 = s1;
-    s2.Push(4);
+    s2.push(4);
     
     cout << s1 << endl;          // 1->2->3
-    cout << s1.Size() << endl;
+    cout << s1.size() << endl;
     
     cout << s2 << endl;          // 1->2->3->4
-    cout << s2.Size() << endl;
+    cout << s2.size() << endl;
     
     swap(s1, s2);
     
     cout << s1 << endl;          // 1->2->3->4
-    cout << s1.Size() << endl;
+    cout << s1.size() << endl;
     
     cout << s2 << endl;          // 1->2->3
-    cout << s2.Size() << endl;
+    cout << s2.size() << endl;
     
     generate(s1.begin(), s1.end(), f);
 
     cout << s1 << endl;          // 100->101->102->103
-    cout << s1.Size() << endl;
+    cout << s1.size() << endl;
     
-    cout << sum<int,List>(s2) << endl;     // 6
+    cout << sum<int,List<int>>(s2) << endl;     // 6
 
     return 0;
 }
