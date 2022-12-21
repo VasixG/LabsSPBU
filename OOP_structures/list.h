@@ -154,19 +154,19 @@ public:
         }
     };
 
-    friend operator == (const_iterator& cit, iterator &it){
+    friend bool operator == (const_iterator& cit, iterator &it){
         return cit->current == it->current;
     }
 
-    friend operator != (const_iterator& cit, iterator &it){
+    friend bool operator != (const_iterator& cit, iterator &it){
         return cit->current != it->current;
     }
 
-    friend operator == (iterator& it, const_iterator &cit){
+    friend bool operator == (iterator& it, const_iterator &cit){
         return cit->current == it->current;
     }
 
-    friend operator != (iterator& it, const_iterator & cit){
+    friend bool operator != (iterator& it, const_iterator & cit){
         return cit->current != it->current;
     }
 

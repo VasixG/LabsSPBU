@@ -11,7 +11,7 @@ public:
     numerate(T start = 0, T _shift = 1): seed(start), shift(_shift) {};
     T operator () () {T old = seed; seed += shift; return old; }
 private:
-    T seed, shift;    
+    T seed, shift;
 };
 
 template <class T, class C> T sum (const C& c)
@@ -24,37 +24,37 @@ template <class T, class C> T sum (const C& c)
 
 int main()
 {
-    Stack s1, s2;
-    numerate f(100);
+    Stack<int> s1, s2;
+    numerate<int> f(100);
 
-    s1.Push(1);
-    s1.Push(2);
-    s1.Push(3);
-    
-    s2.Push(5);
+    s1.push(1);
+    s1.push(2);
+    s1.push(3);
+
+    s2.push(5);
     s2 = s1;
-    s2.Push(4);
-    
+    s2.push(4);
+
     cout << s1 << endl;          // 3->2->1
-    cout << s1.Size() << endl;
-    
+    cout << s1.size() << endl;
+
     cout << s2 << endl;          // 4->3->2->1
-    cout << s2.Size() << endl;
-    
+    cout << s2.size() << endl;
+
     swap(s1, s2);
-    
+
     cout << s1 << endl;          // 4->3->2->1
-    cout << s1.Size() << endl;
-    
+    cout << s1.size() << endl;
+
     cout << s2 << endl;          // 3->2->1
-    cout << s2.Size() << endl;
-    
+    cout << s2.size() << endl;
+
     generate(s1.begin(), s1.end(), f);
 
     cout << s1 << endl;          // 100->101->102->103
-    cout << s1.Size() << endl;
-    
-    cout << sum<int,List>(s2) << endl;     // 6
+    cout << s1.size() << endl;
+
+    //cout << sum<int,List>(s2) << endl;     // 6
 
     return 0;
 }

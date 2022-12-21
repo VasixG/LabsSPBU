@@ -16,7 +16,7 @@
 	"stack.h"
 	"queue.h"
 
-1671476453 c:\users\vasil\documents\codeblocks\labsspbu\oop_structures\list.h
+1671666406 c:\users\vasil\documents\codeblocks\labsspbu\oop_structures\list.h
 	<ostream>
 
 1671476105 c:\users\vasil\documents\codeblocks\labsspbu\oop_structures\stack.h
@@ -29,5 +29,18 @@
 	"stack.h"
 
 1669374737 source:c:\users\vasil\documents\codeblocks\labsspbu\oop_structures\queue.cpp
+	"queue.h"
+
+1669985628 source:c:\users\vasil\documents\codeblocks\labsspbu\oop_structures\test_queue.cpp
+	<iostream>
+	"queue.h"
+
+1669985628 source:c:\users\vasil\documents\codeblocks\labsspbu\oop_structures\test_stack.cpp
+	<iostream>
+	"stack.h"
+
+1671477134 source:c:\users\vasil\documents\codeblocks\labsspbu\oop_structures\test2_queue.cpp
+	<iostream>
+	<algorithm>
 	"queue.h"
 
