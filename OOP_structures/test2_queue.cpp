@@ -30,6 +30,7 @@ int main()
     s1.push(1);
     s1.push(2);
     s1.push(3);
+<<<<<<< HEAD
 
     s2.push(5);
     s2 = s1;
@@ -41,20 +42,45 @@ int main()
     cout << s2 << endl;          // 1->2->3->4
     cout << s2.size() << endl;
 
+=======
+    
+    s2.push(5);
+    s2 = s1;
+    s2.push(4);
+    
+    cout << s1 << endl;          // 1->2->3
+    cout << s1.size() << endl;
+    
+    cout << s2 << endl;          // 1->2->3->4
+    cout << s2.size() << endl;
+    
+>>>>>>> 401fd6e3a9980ae3d9eb1c814320c80d1eef8805
     swap(s1, s2);
 
     cout << s1 << endl;          // 1->2->3->4
     cout << s1.size() << endl;
+<<<<<<< HEAD
 
     cout << s2 << endl;          // 1->2->3
     cout << s2.size() << endl;
 
+=======
+    
+    cout << s2 << endl;          // 1->2->3
+    cout << s2.size() << endl;
+    
+>>>>>>> 401fd6e3a9980ae3d9eb1c814320c80d1eef8805
     generate(s1.begin(), s1.end(), f);
 
     cout << s1 << endl;          // 100->101->102->103
     cout << s1.size() << endl;
+<<<<<<< HEAD
 
     //cout << sum<int,List>(s2) << endl;     // 6
+=======
+    
+    cout << sum<int,List<int>>(s2) << endl;     // 6
+>>>>>>> 401fd6e3a9980ae3d9eb1c814320c80d1eef8805
 
     return 0;
 }
