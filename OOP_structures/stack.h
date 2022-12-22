@@ -53,6 +53,7 @@ public:
 
     virtual ~Stack(){
         while(head) pop();
+        head = nullptr;
     }
 
     enum ERR_CODE {EMPTY, OUT_OF_RANGE};
@@ -91,6 +92,7 @@ public:
     {
         if(&s == this) return *this;
         while(head) pop();
+        head = nullptr;
 
         if(!s.is_empty()){
 
@@ -128,10 +130,15 @@ public:
 
     Stack<T> &operator = (Stack<T> &&s)
     {
+
         if(&s == this) return *this;
+
         while(head) pop();
+        head = nullptr;
 
         head = s.head;
+
+        s.head = nullptr;
 
         return *this;
     }

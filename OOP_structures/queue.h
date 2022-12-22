@@ -26,6 +26,8 @@ public:
 
     virtual ~Queue(){
         while(head) pop();
+        head = nullptr;
+        tail = nullptr;
     }
 
     enum ERR_CODE {EMPTY, OUT_OF_RANGE};
@@ -63,8 +65,13 @@ public:
     {
         if(&q == this) return *this;
         while(head) pop();
+
         head = q.head;
         tail = q.tail;
+
+        q.head = nullptr;
+        q.tail = nullptr;
+
         return *this;
     }
 
@@ -72,9 +79,12 @@ public:
     Queue<T> &operator = (const Queue<T> &q)
     {
         if(&q == this) return *this;
+
         while(head) pop();
+
         head = nullptr;
         tail = nullptr;
+
         Node *temp = q.head;
         while(temp)
         {
